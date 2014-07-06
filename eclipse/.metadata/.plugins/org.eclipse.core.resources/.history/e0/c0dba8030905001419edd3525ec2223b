@@ -1,0 +1,6 @@
+package com.orcinuss.reinforcedtools.proxy;
+
+
+public class RTMClientProxy extends RTMCommonProxy{
+
+}

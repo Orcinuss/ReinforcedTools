@@ -1,0 +1,7 @@
+package com.orcinuss.reinforcedtools.item;
+
+import net.minecraft.item.Item;
+
+public class ItemRTM extends Item{
+
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move 0 packages to &apos;common&apos;&#x0A;- Destination element: &apos;common&apos;&#x0A;- Update references to refactored element" description="Move packages" flags="589830" fragments="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1404068779556" target="/Minecraft/common" version="1.0"/>&#x0A;<refactoring comment="Move 0 packages to &apos;common&apos;&#x0A;- Destination element: &apos;common&apos;&#x0A;- Update references to refactored element" description="Move packages" flags="589830" fragments="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1404068796888" target="/Minecraft/common" version="1.0"/>
+</session>

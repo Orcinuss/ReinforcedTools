@@ -1,0 +1,68 @@
+package com.orcinuss.reinforcedtools;
+
+import com.orcinuss.reinforcedtools.configuration.ConfigurationHandler;
+import com.orcinuss.reinforcedtools.init.ModBlocks;
+import com.orcinuss.reinforcedtools.init.ModItems;
+import com.orcinuss.reinforcedtools.init.Recipes;
+import com.orcinuss.reinforcedtools.item.tools.ItemRTMAxe;
+import com.orcinuss.reinforcedtools.item.tools.ItemRTMBow;
+import com.orcinuss.reinforcedtools.item.tools.ItemRTMHoe;
+import com.orcinuss.reinforcedtools.item.tools.ItemRTMPickaxe;
+import com.orcinuss.reinforcedtools.item.tools.ItemRTMShovel;
+import com.orcinuss.reinforcedtools.item.tools.ItemRTMSword;
+import com.orcinuss.reinforcedtools.proxy.ClientProxy;
+import com.orcinuss.reinforcedtools.proxy.CommonProxy;
+import com.orcinuss.reinforcedtools.proxy.IProxy;
+import com.orcinuss.reinforcedtools.reference.Reference;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockCompressed;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.EnumRarity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBow;
+import net.minecraft.item.ItemShears;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
+public class ReinforcedTools {
+	
+	@Instance(Reference.MOD_ID)
+	public static ReinforcedTools instance;
+	
+	@SidedProxy(clientSide=Reference.CLIENT_PROXY_CLASS, serverSide=Reference.SERVER_PROXY_CLASS)
+	public static IProxy proxy;
+	
+	@EventHandler // Before MC Starts
+    public void preInit(FMLPreInitializationEvent event) {
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		
+		ModItems.init();
+		ModBlocks.init();
+    }
+	@EventHandler // While MC Runs
+    public void init(FMLInitializationEvent event){
+		
+		Recipes.init();
+	}
+	@EventHandler // When MC shuts Down
+    public void postInit(FMLPostInitializationEvent event){
+    	
+    }
+}

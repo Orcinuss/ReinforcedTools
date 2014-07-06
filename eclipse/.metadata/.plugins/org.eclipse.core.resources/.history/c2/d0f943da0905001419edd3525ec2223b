@@ -1,0 +1,5 @@
+package com.orcinuss.reinforcedtools.proxy;
+
+public class ServerProxy implements IProxy{
+
+}

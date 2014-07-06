@@ -1,0 +1,13 @@
+package com.orcinuss.reinforcedtools.block;
+
+import com.orcinuss.reinforcedtools.creativetab.CreativeTab;
+
+import net.minecraft.block.Block;
+
+public class BlockRTM extends Block{
+	public BlockRTM(){
+		this.maxStackSize = 64;
+		this.setCreativeTab(CreativeTab.RTM_TAB);
+	}
+}
+}
