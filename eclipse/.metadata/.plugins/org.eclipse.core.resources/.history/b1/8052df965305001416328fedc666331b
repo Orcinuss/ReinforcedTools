@@ -1,7 +1,0 @@
-package com.orcinuss.reinforcedtools.item;
-
-import net.minecraft.item.ItemCoal;
-
-public class ItemCompressedCoal extends ItemCoal{
-
-}

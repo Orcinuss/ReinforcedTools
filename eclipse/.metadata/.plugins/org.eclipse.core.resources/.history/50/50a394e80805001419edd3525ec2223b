@@ -1,7 +1,0 @@
-package com.orcinuss.reinforcedtools.client;
-
-import com.orcinuss.reinforcedtools.proxy.RTMCommonProxy;
-
-public class RTMClientProxy extends RTMCommonProxy{
-
-}
