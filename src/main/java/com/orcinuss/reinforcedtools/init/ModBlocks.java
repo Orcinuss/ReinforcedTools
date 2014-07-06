@@ -1,5 +1,6 @@
 package com.orcinuss.reinforcedtools.init;
 
+import com.orcinuss.reinforcedtools.block.BlockRTM;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCompressed;
@@ -16,12 +17,12 @@ public class ModBlocks{
 	
 	public static void init() {
 		
-		blockCompactedCoalBlock = new BlockCompressed(MapColor.blackColor).setBlockName("CompactedCoalBlock").setBlockTextureName("rtm:compacted_coal_block");
-		blockNetheriumBlock = new BlockCompressed(MapColor.netherrackColor).setBlockName("NetheriumBlock").setBlockTextureName("rtm:netherium_block");
-		blockReinforcedIronBlock = new BlockCompressed(MapColor.ironColor).setStepSound(Block.soundTypeMetal).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_iron_block");
-		blockReinforcedLapisBlock = new BlockCompressed(MapColor.lapisColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_lapis_block");
-		blockReinforcedObsidianBlock = new BlockCompressed(MapColor.obsidianColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_obsidian_block");
-		blockReinforcedQuartzBlock = new BlockCompressed(MapColor.quartzColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_quartz_block");
+		blockCompactedCoalBlock = new BlockRTM(MapColor.blackColor).setBlockName("CompactedCoalBlock").setBlockTextureName("rtm:compacted_coal_block");
+		blockNetheriumBlock = new BlockRTM(MapColor.netherrackColor).setBlockName("NetheriumBlock").setBlockTextureName("rtm:netherium_block");
+		blockReinforcedIronBlock = new BlockRTM(MapColor.ironColor).setStepSound(Block.soundTypeMetal).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_iron_block");
+		blockReinforcedLapisBlock = new BlockRTM(MapColor.lapisColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_lapis_block");
+		blockReinforcedObsidianBlock = new BlockRTM(MapColor.obsidianColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_obsidian_block");
+		blockReinforcedQuartzBlock = new BlockRTM(MapColor.quartzColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_quartz_block");
 
 		GameRegistry.registerBlock(blockCompactedCoalBlock, "CompactedCoalBlock");
 		GameRegistry.registerBlock(blockNetheriumBlock, "NetheriumBlock");

@@ -1,5 +1,6 @@
 package com.orcinuss.reinforcedtools.handler;
 
+import com.orcinuss.reinforcedtools.configuration.ConfigurationHandler;
 import com.orcinuss.reinforcedtools.init.ModBlocks;
 import com.orcinuss.reinforcedtools.init.ModItems;
 
@@ -13,10 +14,10 @@ public class FuelHandler implements IFuelHandler{
 	
 	@Override
 	public int getBurnTime(ItemStack fuel) {
-		if(fuel.getItem() == ModItems.itemCompressedCoal){
+		if(ConfigurationHandler.compressedCoalAsFuel == true && fuel.getItem() == ModItems.itemCompressedCoal){
 			return 8 * TileEntityFurnace.getItemBurnTime(new ItemStack(Items.coal));
 		}
-		else if(fuel.getItem() == Item.getItemFromBlock(ModBlocks.blockCompactedCoalBlock)){
+		else if(ConfigurationHandler.compactedCoalBlockAsFuel == true && fuel.getItem() == Item.getItemFromBlock(ModBlocks.blockCompactedCoalBlock)){
 			return 72 * TileEntityFurnace.getItemBurnTime(new ItemStack(Items.coal));
 		}
 		return 0;

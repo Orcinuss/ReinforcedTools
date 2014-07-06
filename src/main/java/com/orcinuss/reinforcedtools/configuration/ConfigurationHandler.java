@@ -13,6 +13,7 @@ public class ConfigurationHandler {
 
 	public static Configuration configuration;
 	public static boolean compressedCoalAsFuel = false;
+    public static boolean compactedCoalBlockAsFuel = false;
 	
 	public static void init(File configFile){
 		// Create the configuration object from the given configuration file
@@ -23,8 +24,11 @@ public class ConfigurationHandler {
 	}
 	
 	public static void loadConfiguration(){
-		compressedCoalAsFuel = configuration.getBoolean("compressedCoalAsFuel", Configuration.CATEGORY_GENERAL, true, "Use compressed coal as a fuel source");
-		if(configuration.hasChanged()){
+
+        compressedCoalAsFuel = configuration.getBoolean("compressedCoalAsFuel", Configuration.CATEGORY_GENERAL, true, "Use compressed coal as a fuel source? Equal to 8 pieces of coal");
+        compactedCoalBlockAsFuel = configuration.getBoolean("compressedCoalBlockAsFuel", Configuration.CATEGORY_GENERAL, false, "Use compressed coal blocks as a fuel source. Equal to 72 pieces of coal");
+
+        if(configuration.hasChanged()){
 			configuration.save();
 		}
 		LogHelper.info("Configuration File Loaded");

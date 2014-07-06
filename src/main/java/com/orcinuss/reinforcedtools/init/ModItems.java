@@ -75,7 +75,7 @@ public class ModItems {
 		itemReinforcedIronRecurveLimb = new ItemRTM().setUnlocalizedName("ReinforcedIronRecurveLimb").setTextureName("rtm:reinforced_iron_recurve_limb");
 		itemReinforcedLapisRecurveLimb = new ItemRTM().setUnlocalizedName("ReinforcedLapisRecurveLimb").setTextureName("rtm:reinforced_lapis_recurve_limb");
 		itemReinforcedObsidianRecurveLimb = new ItemRTM().setUnlocalizedName("ReinforcedObsidianRecurveLimb").setTextureName("rtm:reinforced_obsidian_recurve_limb");*/
-		itemNetheriumIngot = new ItemRTM().setUnlocalizedName("NethiriumIngot").setTextureName("rtm:netherium_ingot");
+		itemNetheriumIngot = new ItemRTM().setUnlocalizedName("NetheriumIngot").setTextureName("rtm:netherium_ingot");
 		itemReinforcedIronIngot = new ItemRTM().setUnlocalizedName("ReinforcedIronIngot").setTextureName("rtm:reinforced_iron_ingot");
 		itemReinforcedLapisIngot = new ItemRTM().setUnlocalizedName("ReinforcedLapisIngot").setTextureName("rtm:reinforced_lapis_ingot");
 		itemReinforcedObsidianIngot = new ItemRTM().setUnlocalizedName("ReinforcedObsidianIngot").setTextureName("rtm:reinforced_obsidian_ingot");
