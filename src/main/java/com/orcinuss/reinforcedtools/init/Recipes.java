@@ -3,6 +3,7 @@ package com.orcinuss.reinforcedtools.init;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -75,9 +76,19 @@ public class Recipes {
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedObsidianBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedObsidianIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedQuartzBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot});
 
-		//GameRegistry.addEnchantedRecipe(new ItemStack(ModItems.toolBlockHarvester, 1), new Object[] {"X X", " X ", " Y ", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot, Character.valueOf('Y'), ModItems.itemReinforcedIronIngot});
+        addEnchantedRecipe(ModItems.toolBlockHarvester, Enchantment.silkTouch, 1, new Object[] { "X X", " X ", " Y ", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot, Character.valueOf('Y'), ModItems.itemReinforcedIronIngot});
 
 		GameRegistry.addSmelting(HardenedIronIngotStack, ReinforcedIronIngotStack, 0.3F);
 	
 	}
+
+    public static void addEnchantedRecipe(Item item, Enchantment enchantment, int enchantmentLevel, Object[] ingredientArray)
+    {
+        ItemStack result = new ItemStack(item);
+        if (enchantment != null) {
+            result.addEnchantment(enchantment, enchantmentLevel);
+        }
+
+        GameRegistry.addRecipe(result, ingredientArray);
+    }
 }
