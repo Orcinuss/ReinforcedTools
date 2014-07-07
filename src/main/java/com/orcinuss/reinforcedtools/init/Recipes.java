@@ -1,5 +1,6 @@
 package com.orcinuss.reinforcedtools.init;
 
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -11,6 +12,7 @@ public class Recipes {
 		ItemStack LapisStack = new ItemStack(Items.dye, 1, 4);
 		ItemStack HardenedIronIngotStack = new ItemStack(ModItems.itemHardenedIronIngot, 1);
 		ItemStack ReinforcedIronIngotStack = new ItemStack(ModItems.itemReinforcedIronIngot);
+        ItemStack BlockHarvesterStack = new ItemStack(ModItems.toolBlockHarvester, 1);
 		
 		GameRegistry.addShapelessRecipe(HardenedIronIngotStack, new Object[] {Items.iron_ingot, ModItems.itemCompressedCoal});
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemHardenedLapisChunk, 1), new Object[] {ModItems.itemCompressedLapis, ModItems.itemCompressedCoal});
@@ -73,9 +75,9 @@ public class Recipes {
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedLapisBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedLapisIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedObsidianBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedObsidianIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedQuartzBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot});
-		
+
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.toolBlockHarvester, 1), new Object[] {"X X", " X ", " Y ", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot, Character.valueOf('Y'), ModItems.itemReinforcedIronIngot});
-		
+
 		GameRegistry.addSmelting(HardenedIronIngotStack, ReinforcedIronIngotStack, 0.3F);
 	
 	}
