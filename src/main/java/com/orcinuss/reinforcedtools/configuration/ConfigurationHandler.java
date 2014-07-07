@@ -14,6 +14,7 @@ public class ConfigurationHandler {
 	public static Configuration configuration;
 	public static boolean compressedCoalAsFuel = false;
     public static boolean compactedCoalBlockAsFuel = false;
+    public static boolean gHarvesterAutoSilkTouch = false;
 	
 	public static void init(File configFile){
 		// Create the configuration object from the given configuration file
@@ -27,6 +28,7 @@ public class ConfigurationHandler {
 
         compressedCoalAsFuel = configuration.getBoolean("compressedCoalAsFuel", Configuration.CATEGORY_GENERAL, true, "Use compressed coal as a fuel source? Equal to 8 pieces of coal");
         compactedCoalBlockAsFuel = configuration.getBoolean("compressedCoalBlockAsFuel", Configuration.CATEGORY_GENERAL, false, "Use compressed coal blocks as a fuel source. Equal to 72 pieces of coal");
+        gHarvesterAutoSilkTouch = configuration.getBoolean("gHarvesterAutoSilkTouch", Configuration.CATEGORY_GENERAL, true, "Should the glowstone harvester automatically get the Silk Touch enchant?");
 
         if(configuration.hasChanged()){
 			configuration.save();

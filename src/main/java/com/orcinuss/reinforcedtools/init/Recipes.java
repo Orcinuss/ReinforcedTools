@@ -1,5 +1,6 @@
 package com.orcinuss.reinforcedtools.init;
 
+import com.orcinuss.reinforcedtools.configuration.ConfigurationHandler;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -75,8 +76,12 @@ public class Recipes {
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedLapisBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedLapisIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedObsidianBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedObsidianIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockReinforcedQuartzBlock, 1), new Object[] {"XXX", "XXX", "XXX", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot});
-
-        addEnchantedRecipe(ModItems.toolBlockHarvester, Enchantment.silkTouch, 1, new Object[] { "X X", " X ", " Y ", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot, Character.valueOf('Y'), ModItems.itemReinforcedIronIngot});
+        if(ConfigurationHandler.gHarvesterAutoSilkTouch == true){
+            addEnchantedRecipe(ModItems.toolBlockHarvester, Enchantment.silkTouch, 1, new Object[] { "X X", " X ", " Y ", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot, Character.valueOf('Y'), ModItems.itemReinforcedIronIngot});
+        }
+        else{
+            GameRegistry.addShapedRecipe(new ItemStack(ModItems.toolBlockHarvester, 1), new Object[] { "X X", " X ", " Y ", Character.valueOf('X'), ModItems.itemReinforcedQuartzIngot, Character.valueOf('Y'), ModItems.itemReinforcedIronIngot});
+        }
 
 		GameRegistry.addSmelting(HardenedIronIngotStack, ReinforcedIronIngotStack, 0.3F);
 	
@@ -89,6 +94,6 @@ public class Recipes {
             result.addEnchantment(enchantment, enchantmentLevel);
         }
 
-        GameRegistry.addRecipe(result, ingredientArray);
+        GameRegistry.addShapedRecipe(result, ingredientArray);
     }
 }
