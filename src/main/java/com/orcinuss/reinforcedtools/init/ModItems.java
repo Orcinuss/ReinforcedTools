@@ -2,15 +2,12 @@ package com.orcinuss.reinforcedtools.init;
 
 import com.orcinuss.reinforcedtools.creativetab.CreativeTab;
 import com.orcinuss.reinforcedtools.item.ItemRTM;
-import com.orcinuss.reinforcedtools.item.tools.ItemRTMAxe;
-import com.orcinuss.reinforcedtools.item.tools.ItemRTMHoe;
-import com.orcinuss.reinforcedtools.item.tools.ItemRTMPickaxe;
-import com.orcinuss.reinforcedtools.item.tools.ItemRTMShovel;
-import com.orcinuss.reinforcedtools.item.tools.ItemRTMSword;
+import com.orcinuss.reinforcedtools.item.tools.*;
+
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModItems {
@@ -61,7 +58,7 @@ public class ModItems {
 	public static Item toolReinforcedObsidianHoe;
 	public static Item toolReinforcedObsidianSword;
 	//public static Item toolReinforcedObsidianBow;
-	//public static Item toolReinforcedQuartzShears;
+	public static Item toolBlockHarvester;
 
 	public static void init(){
 		itemCompressedCoal = new ItemRTM().setUnlocalizedName("CompressedCoal").setTextureName("rtm:compressed_coal");
@@ -99,13 +96,13 @@ public class ModItems {
 		toolReinforcedLapisHoe = new ItemRTMHoe(RTLAPIS).setUnlocalizedName("ReinforcedLapisHoe").setTextureName("rtm:reinforced_lapis_hoe");
 		toolReinforcedLapisSword = new ItemRTMSword(RTLAPIS).setUnlocalizedName("ReinforcedLapisSword").setTextureName("rtm:reinforced_lapis_sword");
 		//toolReinforcedLapisBow = new ItemBow().setUnlocalizedName("ReinforcedLapisBow").setTextureName("rtm:reinforced_lapis_bow");
-		toolReinforcedObsidianPickaxe = new ItemRTMPickaxe(RTOBSIDIAN).setUnlocalizedName("ReinforcedObsidianPickaxe").setTextureName("rtm:reinforced_obsidian_pickaxe");
-		toolReinforcedObsidianAxe = new ItemRTMAxe(RTOBSIDIAN).setUnlocalizedName("ReinforcedObsidianAxe").setTextureName("rtm:reinforced_obsidian_axe");
-		toolReinforcedObsidianShovel = new ItemRTMShovel(RTOBSIDIAN).setUnlocalizedName("ReinforcedObsidianShovel").setTextureName("rtm:reinforced_obsidian_shovel");
-		toolReinforcedObsidianHoe = new ItemRTMHoe(RTOBSIDIAN).setUnlocalizedName("ReinforcedObsidianHoe").setTextureName("rtm:reinforced_obsidian_hoe");
-		toolReinforcedObsidianSword = new ItemRTMSword(RTOBSIDIAN).setUnlocalizedName("ReinforcedObsidianSword").setTextureName("rtm:reinforced_obsidian_sword");
+		toolReinforcedObsidianPickaxe = new ItemRTMPickaxe(RTOBSIDIAN, EnumRarity.uncommon).setUnlocalizedName("ReinforcedObsidianPickaxe").setTextureName("rtm:reinforced_obsidian_pickaxe");
+		toolReinforcedObsidianAxe = new ItemRTMAxe(RTOBSIDIAN, EnumRarity.uncommon).setUnlocalizedName("ReinforcedObsidianAxe").setTextureName("rtm:reinforced_obsidian_axe");
+		toolReinforcedObsidianShovel = new ItemRTMShovel(RTOBSIDIAN, EnumRarity.uncommon).setUnlocalizedName("ReinforcedObsidianShovel").setTextureName("rtm:reinforced_obsidian_shovel");
+		toolReinforcedObsidianHoe = new ItemRTMHoe(RTOBSIDIAN, EnumRarity.uncommon).setUnlocalizedName("ReinforcedObsidianHoe").setTextureName("rtm:reinforced_obsidian_hoe");
+		toolReinforcedObsidianSword = new ItemRTMSword(RTOBSIDIAN, EnumRarity.uncommon).setUnlocalizedName("ReinforcedObsidianSword").setTextureName("rtm:reinforced_obsidian_sword");
 		//toolReinforcedObsidianBow = new ItemBow().setUnlocalizedName("ReinforcedObsdianBow").setTextureName("rtm:reinforced_obsidian_bow");
-		//toolReinforcedQuartzShears = new ItemShears().setUnlocalizedName("ReinforcedQuartzShears").setTextureName("rtm:reinforced_quartz_shears");
+		toolBlockHarvester = new ItemRTMHarvester(RTQUARTZ, EnumRarity.uncommon).setUnlocalizedName("BlockHarvester").setTextureName("rtm:block_harvester");
 		
 		GameRegistry.registerItem(itemCompressedCoal, "CompressedCoal");
 		GameRegistry.registerItem(itemCompressedLapis, "CompressedLapis");
@@ -148,6 +145,6 @@ public class ModItems {
 		GameRegistry.registerItem(toolReinforcedObsidianHoe, "ReinforcedObsidianHoe");
 		GameRegistry.registerItem(toolReinforcedObsidianSword, "ReinforcedObsidianSword");
 		//GameRegistry.registerItem(toolReinforcedObsidianBow, "ReinforcedObsidianBow");
-		//GameRegistry.registerItem(toolReinforcedQuartzShears, "ReinforcedQuartzShears");
+		GameRegistry.registerItem(toolBlockHarvester, "BlockHarvester");
 	}
 }
