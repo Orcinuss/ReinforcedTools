@@ -23,11 +23,9 @@ public class ItemRTMHarvester extends ItemTool{
         this(material, EnumRarity.common);
     }
     public ItemRTMHarvester(Item.ToolMaterial material, EnumRarity rarity ){
-        super(5.0F, material, blocksToBreak);
+        super(0.0F, material, blocksToBreak);
         this.rarity = rarity;
         this.maxStackSize = 1;
         this.setCreativeTab(CreativeTab.RTM_TAB);
     }
-
-    //ItemStack BlockHarvesterStack = new ItemStack(ModItems.toolBlockHarvester, BlockHarvesterStack.addEnchantment(Enchantment.silkTouch, 1));
 }

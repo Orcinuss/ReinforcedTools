@@ -12,7 +12,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class ModItems {
 	
-	public static Item.ToolMaterial RTQUARTZ = EnumHelper.addToolMaterial("RTQUARTZ", 0, 256, 8.0F, 0.5F, 50);
+	public static Item.ToolMaterial RTQUARTZ = EnumHelper.addToolMaterial("RTQUARTZ", 0, 256, 8.0F, 0.0F, 22);
 	public static Item.ToolMaterial NETHERIUM = EnumHelper.addToolMaterial("NETHERIUM", 1, 192, 4.0F, 1.8F, 7);
 	public static Item.ToolMaterial RTIRON = EnumHelper.addToolMaterial("RTIRON", 2, 512, 6.0F, 2.3F, 14);
 	public static Item.ToolMaterial RTLAPIS = EnumHelper.addToolMaterial("RTLAPIS", 2, 1152, 5.5F, 2.6F, 22);
