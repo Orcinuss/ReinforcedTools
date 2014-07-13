@@ -53,7 +53,6 @@ public class ModItems {
     public static Item toolReinforcedObsidianSword;
     public static Item toolGlowstoneHarvester;
     public static Item toolGlowstoneHarvesterEnchanted;
-    public ItemStack GHStack;
 
     public static void init() {
         itemCompressedCoal = new ItemRTM().setUnlocalizedName("CompressedCoal").setTextureName("rtm:compressed_coal");

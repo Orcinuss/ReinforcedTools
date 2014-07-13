@@ -28,7 +28,7 @@ public class ConfigurationHandler {
 
         compressedCoalAsFuel = configuration.getBoolean("compressedCoalAsFuel", Configuration.CATEGORY_GENERAL, true, "Use compressed coal as a fuel source? Equal to 8 pieces of coal");
         compactedCoalBlockAsFuel = configuration.getBoolean("compressedCoalBlockAsFuel", Configuration.CATEGORY_GENERAL, false, "Use compressed coal blocks as a fuel source. Equal to 72 pieces of coal");
-        gHarvesterAutoSilkTouch = configuration.getBoolean("gHarvesterAutoSilkTouch", Configuration.CATEGORY_GENERAL, true, "Should the glowstone harvester automatically get the Silk Touch enchant?");
+        gHarvesterAutoSilkTouch = configuration.getBoolean("gHarvesterAutoSilkTouch", Configuration.CATEGORY_GENERAL, false, "Should the glowstone harvester automatically get the Silk Touch enchant? Requires client restart!");
 
         if(configuration.hasChanged()){
 			configuration.save();
