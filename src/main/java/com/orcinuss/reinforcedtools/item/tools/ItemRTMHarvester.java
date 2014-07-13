@@ -1,10 +1,7 @@
 package com.orcinuss.reinforcedtools.item.tools;
 
 import com.google.common.collect.Sets;
-import com.orcinuss.reinforcedtools.creativetab.CreativeTab;
-import com.orcinuss.reinforcedtools.init.ModItems;
 import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -18,7 +15,7 @@ public class ItemRTMHarvester extends ItemTool{
     private static final Set blocksToBreak = Sets.newHashSet(new Block[]{Blocks.glowstone});
 
     public EnumRarity rarity;
-    public ItemRTMHarvester(ToolMaterial material)
+    public ItemRTMHarvester(Item.ToolMaterial material)
     {
         this(material, EnumRarity.common);
     }
@@ -26,6 +23,8 @@ public class ItemRTMHarvester extends ItemTool{
         super(0.0F, material, blocksToBreak);
         this.rarity = rarity;
         this.maxStackSize = 1;
-        this.setCreativeTab(CreativeTab.RTM_TAB);
     }
+
+
+
 }

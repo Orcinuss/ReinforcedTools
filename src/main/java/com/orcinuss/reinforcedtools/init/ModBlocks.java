@@ -20,9 +20,9 @@ public class ModBlocks{
 		blockCompactedCoalBlock = new BlockRTM(MapColor.blackColor).setBlockName("CompactedCoalBlock").setBlockTextureName("rtm:compacted_coal_block");
 		blockNetheriumBlock = new BlockRTM(MapColor.netherrackColor).setBlockName("NetheriumBlock").setBlockTextureName("rtm:netherium_block");
 		blockReinforcedIronBlock = new BlockRTM(MapColor.ironColor).setStepSound(Block.soundTypeMetal).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_iron_block");
-		blockReinforcedLapisBlock = new BlockRTM(MapColor.lapisColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_lapis_block");
-		blockReinforcedObsidianBlock = new BlockRTM(MapColor.obsidianColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_obsidian_block");
-		blockReinforcedQuartzBlock = new BlockRTM(MapColor.quartzColor).setBlockName("ReinforcedIronBlock").setBlockTextureName("rtm:reinforced_quartz_block");
+		blockReinforcedLapisBlock = new BlockRTM(MapColor.lapisColor).setBlockName("ReinforcedLapisBlock").setBlockTextureName("rtm:reinforced_lapis_block");
+		blockReinforcedObsidianBlock = new BlockRTM(MapColor.obsidianColor).setBlockName("ReinforcedObsidianBlock").setBlockTextureName("rtm:reinforced_obsidian_block");
+		blockReinforcedQuartzBlock = new BlockRTM(MapColor.quartzColor).setBlockName("ReinforcedQuartzBlock").setBlockTextureName("rtm:reinforced_quartz_block");
 
 		GameRegistry.registerBlock(blockCompactedCoalBlock, "CompactedCoalBlock");
 		GameRegistry.registerBlock(blockNetheriumBlock, "NetheriumBlock");
